@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
 import SignIn from './pages/SignIn'
+import CreateNewPage from './pages/CreateNew'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/signin' element={<SignIn />} />
+          <Route path='/create' element={<CreateNewPage />} />
         </Routes>
       </div>
     </>

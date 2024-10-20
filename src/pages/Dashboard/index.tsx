@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiDownvote, BiSolidDownvote, BiSolidUpvote, BiUpvote } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Dashboard: React.FC = () => {
     // Placeholder for fetching user's data
@@ -72,9 +73,12 @@ const Dashboard: React.FC = () => {
                         <p>Votes: {idea.votes}</p>
                     </div>
                 ))}
+                <Link to={"/create"}>
+                
                 <button className="bg-green-500 text-white px-4 py-2 rounded">
                     Create New Idea
                 </button>
+                </Link>
             </div>
 
             <div className="mb-8">
