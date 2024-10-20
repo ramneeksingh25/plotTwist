@@ -6,6 +6,7 @@ import Header from './components/Header'
 import SignIn from './pages/SignIn'
 import CreateNewPage from './pages/CreateNew'
 import ExploreIdeas from './pages/Explore'
+import PricingPage from './pages/Price'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path='/signin' element={<SignIn />} />
           <Route path='/create' element={<CreateNewPage />} />
           <Route path='/exploreideas' element={<ExploreIdeas />} />
+          <Route path='/pricing' element={<PricingPage />} />
         </Routes>
       </div>
     </>

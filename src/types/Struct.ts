@@ -1,37 +1,51 @@
-// Define buyerStruct
-type buyerStruct = {
+enum SubTier {
+  None = "None",
+  Silver = "Silver",
+  Gold = "Gold",
+  Diamond = "Diamond",
+}
+
+enum Vote {
+  None = "None",
+  Upvote = "upvote",
+  Downvote = "downvote",
+}
+
+export enum ProposalStatus {
+  Pending = "Pending",
+  Added = "Added",
+  Active = "Active",
+  Passed = "Passed",
+  Failed = "Failed",
+  Canceled = "Canceled",
+}
+
+
+export interface BuyerStruct {
   name: string;
-  tier: string;
-  TokenAmount: number;
-  walletAddress: string;
-};
+  tier: SubTier;
+  endingTime: number; 
+  tokenAmount: number; 
+}
 
-// Define voteStruct
-type voteStruct = {
-  id: number;
-  title: string;
-  upvotes: number;
-  downvotes: number;
-  desc: string;
-  voter: string;
+// Interface for voteStruct
+export interface VoteStruct {
+  voter: string; 
+  vote: Vote;
   numberOfVotes: number;
-};
+}
 
-// Define proposalStruct
-type proposalStruct = {
-  id: number;
+
+export interface ProposalStruct {
+  id: number; 
+  proposer: string;
   title: string;
-  upvotes: number;
-  downvotes: number;
-  status: string;
+  description: string;
+  executionTime: number; 
+  votingStartTime: number;
+  votingEndTime: number;
   votesFor: number;
   votesAgainst: number;
-  proposer: string;
-  executionTime: string;
-  votingStartTime: string;
-  votingEndTime: string;
   totalVotes: number;
-  description: string;
-};
-
-export type { buyerStruct, proposalStruct, voteStruct };
+  status: ProposalStatus;
+}
