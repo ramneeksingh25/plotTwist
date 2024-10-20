@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ConnectBtn from "../../components/ConnectBtn";
-
+import image from "../../assets/signup.jpg"
 const SignIn = () => {
 	const [formData, setFormData] = useState({
 		walletId: "",
@@ -153,7 +153,7 @@ const SignIn = () => {
 				</div>
 				<div className="hidden md:block lg:block">
 					<img
-						src="https://miro.medium.com/v2/resize:fit:1200/0*MkUuRYfx9-oHW0qH.jpg"
+						src={image}
 						alt="PlotTwist"
 						className="w-full h-full object-cover"
 					/>

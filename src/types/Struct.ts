@@ -5,7 +5,7 @@ enum SubTier {
   Diamond = "Diamond",
 }
 
-enum Vote {
+export enum Vote {
   None = "None",
   Upvote = "upvote",
   Downvote = "downvote",

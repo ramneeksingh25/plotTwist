@@ -1,8 +1,8 @@
 import React from "react";
 
-const PricingPage: React.FC = () => {
+const Pricing: React.FC = () => {
 	return (
-		<div className="h-screen w-full flex flex-col items-center justify-center ">
+		<div className="min-h-[70vh] w-full flex flex-col items-center justify-center bg-gradient-to-tr  dark:from-gray-900 dark:to-gray-950">
 			<div className="text-center mb-12">
 				<h1 className="text-5xl font-bold text-gray-800 dark:text-white">Choose Your Plan</h1>
 				<p className="text-gray-600 dark:text-gray-400 mt-4">Find the plan that’s right for you.</p>
@@ -58,4 +58,4 @@ const PricingPage: React.FC = () => {
 	);
 };
 
-export default PricingPage;
+export default Pricing;
