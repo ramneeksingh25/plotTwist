@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import image1 from  '../../assets/1submit.webp'
+import image3 from  '../../assets/2bring.webp'
+import image2 from  '../../assets/3vote.webp'
+import { Link } from "react-router-dom";
 
 const LandingSection = () => (
-	<header className="w-full h-[90vh] flex flex-col justify-center items-center bg-gradient-to-t text-center from-gray-300 dark:from-gray-900 to-zinc-700 dark:to-black select-none px-[10vw] ">
+	<header className="w-full h-[90vh] flex flex-col justify-center items-center bg-gradient-to-t text-center from-gray-300 dark:from-gray-800 to-zinc-400 dark:to-black select-none px-[10vw] ">
 		<h1 className="text-4xl md:text-6xl font-bold mb-4">
 			Revolutionize Storytelling: Vote on Movie Ideas!
 		</h1>
@@ -9,11 +13,13 @@ const LandingSection = () => (
 			Where Your Ideas Get a Spotlight and Your Votes Bring Them to Life.
 		</p>
 		<div className="flex justify-center space-x-6 font-bold">
-			<button className="text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden bg-white dark:bg-transparent border   border-red-600 px-3 text-red-600  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-600 before:transition-all before:duration-500 hover:text-white hover:shadow-red-600 hover:before:left-0 hover:before:w-full">
-				<span className="relative z-10">Explore Ideas</span>
-			</button>
-			<button className="relative flex h-[50px] w-40 items-center justify-center overflow-hidden bg-red-600 font-medium text-white shadow-2xl transition-all duration-300 before:absolute before:inset-0 before:border-0 before:border-white dark:before:border-zinc-900 before:duration-100 before:ease-linear hover:bg-black hover:text-red-600 hover:shadow-red-600 hover:before:border-[25px]">
-				<span className="relative z-10">Submit Your Idea</span>
+			<Link to="/exploreideas">
+				<button className="text-red hover:before:bg-redborder-red-500 relative h-[50px] w-40 overflow-hidden bg-red-600 dark:bg-red-600 border border-red-600 px-3 text-white  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:dark:bg-gray-900 before:bg-gray-300 before:transition-all before:duration-500 hover:text-red-600 hover:shadow-red-600 hover:before:left-0 hover:before:w-full">
+					<span className="relative z-10">Explore Ideas</span>
+				</button>
+			</Link>
+			<button className="text-red hover:before:bg-red-600 relative h-[50px] w-40 overflow-hidden bg-gray-300 dark:bg-transparent border  border-red-600 px-3 text-red-600  shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-red-600 before:transition-all before:duration-500 hover:text-white hover:shadow-red-600 hover:before:left-0 hover:before:w-full">
+				<span className="relative z-10">Create Ideas</span>
 			</button>
 		</div>
 	</header>
@@ -23,20 +29,20 @@ const HeroSection2 = () => <>Wow</>;
 const HeroSection1 = () => {
 	// State to track the currently hovered point
 	const [currentImage, setCurrentImage] = useState(1);
-
 	// Define the images to be shown
-	const images = {
-		image1: "path-to-image1.jpg",
-		image2: "path-to-image2.jpg",
-		image3: "path-to-image3.jpg",
-	};
+	const images = [
+		image1,
+		image2,
+		image3,
+	]
+	
 
 	return (
-		<div className="hero-section flex items-center justify-between px-[10vw] py-32 bg-gray-400 dark:bg-gray-800">
+		<div className="hero-section flex items-center justify-between px-[10vw] py-32 bg-white dark:bg-black">
 			{/* Left Side - Image */}
-			<div className="image-container w-1/2">
+			<div className="w-1/2 rounded-3xl overflow-hidden">
 				<img
-					src={images.image1}
+					src={images[currentImage-1]}
 					alt={`Hero ${currentImage}`}
 					className="w-full h-auto"
 				/>
