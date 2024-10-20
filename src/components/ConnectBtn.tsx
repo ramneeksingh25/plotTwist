@@ -1,6 +1,6 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-const ConnectBtn = () => {
+const ConnectBtn: React.FC<{ connectMessage: string }> = ({ connectMessage }) => {
   return (
     <ConnectButton.Custom>
     {({
@@ -36,8 +36,8 @@ const ConnectBtn = () => {
           {(() => {
             if (!connected) {
               return (
-                <button onClick={openConnectModal} type="button" className="before:ease relative overflow-hidden border border-red-600 bg-red-600 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-500 hover:shadow-red-500/55 hover:before:-translate-x-40 rounded-xl px-3 py-2">
-                <span>Connect Your Wallet</span>
+                <button onClick={openConnectModal} type="button" className="before:ease relative overflow-hidden border border-red-600 bg-red-600 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-500 hover:shadow-red-500/55 hover:before:-translate-x-60 rounded-xl px-3 py-2">
+                  <span>{connectMessage}</span>
                 </button>
               );
             }
@@ -51,11 +51,12 @@ const ConnectBtn = () => {
             }
 
             return (
-              <div style={{ display: 'flex', gap: 12 }}>
+              <div className='bg-red-600 h-fit w-fit rounded-xl items-center overflow-hidden grid grid-cols-3'>
                 <button
                   onClick={openChainModal}
                   style={{ display: 'flex', alignItems: 'center' }}
                   type="button"
+                  className='bg-white h-full w-full text-red-700 font-bold px-2 py-1'
                 >
                   {chain.hasIcon && (
                     <div
@@ -79,8 +80,7 @@ const ConnectBtn = () => {
                   )}
                   {chain.name}
                 </button>
-
-                <button onClick={openAccountModal} type="button">
+                <button onClick={openAccountModal} type="button" className='h-full w-full text-white px-2 py-1 col-span-2 font-PW'>
                   {account.displayName}
                   {account.displayBalance
                     ? ` (${account.displayBalance})`

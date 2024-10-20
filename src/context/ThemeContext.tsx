@@ -29,7 +29,7 @@ const ThemeProvider: React.FC<React.PropsWithChildren<unknown>> = ({
 	return (
 		<ThemeToggleContext.Provider value={{ theme, toggleTheme }}>
 			<div
-				className={`flex flex-col min-h-screen bg-white dark:bg-black text-black dark:text-white`}>
+				className={`flex flex-col min-h-screen bg-gray-50 dark:bg-gray-800 text-black dark:text-white`}>
 				{children}
 			</div>
 		</ThemeToggleContext.Provider>
