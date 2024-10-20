@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const LandingSection = () => (
-	<header className="w-full h-[90vh] flex flex-col justify-center items-center bg-gradient-to-t text-center from-gray-300 dark:from-gray-800 to-zinc-700 dark:to-black select-none px-[10vw] ">
+	<header className="w-full h-[90vh] flex flex-col justify-center items-center bg-gradient-to-t text-center from-gray-300 dark:from-gray-900 to-zinc-700 dark:to-black select-none px-[10vw] ">
 		<h1 className="text-4xl md:text-6xl font-bold mb-4">
-			Revolutionize Storytelling: Vote on Movie Ideas Powered by Blockchain!
+			Revolutionize Storytelling: Vote on Movie Ideas!
 		</h1>
 		<p className="text-lg md:text-xl text-gray-900 dark:text-gray-400 mb-8">
 			Where Your Ideas Get a Spotlight and Your Votes Bring Them to Life.
@@ -32,7 +32,7 @@ const HeroSection1 = () => {
 	};
 
 	return (
-		<div className="hero-section flex items-center justify-between px-[10vw] py-32 bg-gray-200 dark:bg-gray-900">
+		<div className="hero-section flex items-center justify-between px-[10vw] py-32 bg-gray-400 dark:bg-gray-800">
 			{/* Left Side - Image */}
 			<div className="image-container w-1/2">
 				<img

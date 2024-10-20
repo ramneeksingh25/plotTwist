@@ -51,7 +51,7 @@ const Logo = () => (
 const Menu = () => (
 	<>
 		<ul className="lg:flex items-center justify-around col-span-3 hidden sm:hidden md:hidden">
-			{["Home", "Explore Ideas", "Pricing", "How It Works"].map((menu) => {
+			{["Home", "Explore Ideas", "Pricing", "How It Works","Dashboard"].map((menu) => {
 				return (
 					<li key={menu}>
 						<Link
