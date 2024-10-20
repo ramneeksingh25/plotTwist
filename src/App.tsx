@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard'
 import Header from './components/Header'
 import SignIn from './pages/SignIn'
 import CreateNewPage from './pages/CreateNew'
+import ExploreIdeas from './pages/Explore'
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <div className=''>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/dashboard' element={<Dashboard  />} />
           <Route path='/signin' element={<SignIn />} />
           <Route path='/create' element={<CreateNewPage />} />
+          <Route path='/exploreideas' element={<ExploreIdeas />} />
         </Routes>
       </div>
     </>
