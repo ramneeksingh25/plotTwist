@@ -36,7 +36,7 @@ const ConnectBtn = () => {
           {(() => {
             if (!connected) {
               return (
-                <button onClick={openConnectModal} type="button" className="before:ease relative overflow-hidden border border-red-500 bg-red-500 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-200 hover:shadow-red-500/55 hover:before:-translate-x-40 rounded-xl px-3 py-2">
+                <button onClick={openConnectModal} type="button" className="before:ease relative overflow-hidden border border-red-600 bg-red-600 text-white shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-12 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-500 hover:shadow-red-500/55 hover:before:-translate-x-40 rounded-xl px-3 py-2">
                 <span>Connect Your Wallet</span>
                 </button>
               );

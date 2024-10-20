@@ -4,6 +4,26 @@ import { useTheme } from "../context/ThemeContext";
 import { FaMoon, FaSun } from "react-icons/fa";
 import ConnectBtn from "./ConnectBtn";
 
+
+const Header = () => {
+	const { theme, toggleTheme } = useTheme();
+	return (
+		<>
+			<nav
+				className="fixed z-40 w-full grid grid-cols-8 items-center h-20 px-[4vw] sm:px-6 bg-gradient-to-l from-gray-800/20
+			dark:from-gray-200/20 to-zinc-800/80 dark:to-zinc-800/50 backdrop-blur-sm">
+				<Logo />
+				<Menu />
+				<div className="col-span-2"></div>
+				<ButtonMenu
+					toggleTheme={toggleTheme}
+					theme={theme}
+				/>
+			</nav>
+		</>
+	);
+};
+
 const Logo = () => (
 	<div className="relative flex items-center justify-center col-span-1">
 		<Link to={"/"}>
@@ -56,23 +76,5 @@ const ButtonMenu = ({
 		</div>
 	</div>
 );
-const Header = () => {
-	const { theme, toggleTheme } = useTheme();
-	return (
-		<>
-			<nav
-				className="absolute z-10 w-full grid grid-cols-8 items-center h-20 px-4 sm:px-6 bg-gray-800/20
-			dark:bg-white/10 backdrop-blur-sm">
-				<Logo />
-				<Menu />
-				<div className="col-span-2"></div>
-				<ButtonMenu
-					toggleTheme={toggleTheme}
-					theme={theme}
-				/>
-			</nav>
-		</>
-	);
-};
 
 export default Header;
