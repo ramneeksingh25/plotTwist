@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ProposalStruct } from "../../types/Struct";
+import { ProposalStruct } from "../../types/type.dt";
 import Idea from "../../components/Idea";
 import { movieProposals } from "./example";
 

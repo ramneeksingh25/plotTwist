@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ProposalStruct, ProposalStatus, VoteStruct } from "../../types/Struct";
+import { ProposalStruct, ProposalStatus, VoteStruct } from "../../types/type.dt";
 import { BiSolidDownvote, BiSolidUpvote } from "react-icons/bi";
 import { buyerEx, submittedIdeasEx, voteIdeasExample } from "./example";
 import Idea from "../../components/Idea";

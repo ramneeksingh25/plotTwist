@@ -1,4 +1,4 @@
-import { ProposalStatus, Vote } from "../../types/Struct";
+import { ProposalStatus, Vote } from "../../types/type.dt";
 
 const buyerEx = {
     name: "Alice Smith",

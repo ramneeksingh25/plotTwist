@@ -49,3 +49,16 @@ export interface ProposalStruct {
   totalVotes: number;
   status: ProposalStatus;
 }
+
+export interface GlobalState {
+  proposals: ProposalStruct[]
+  proposal: ProposalStruct | null
+  votes: VoteStruct[]
+  vote: VoteStruct | null
+  users: BuyerStruct[]
+  user: BuyerStruct | null
+}
+
+export interface RootState {
+  globalStates: GlobalState
+}
