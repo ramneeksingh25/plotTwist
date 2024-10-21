@@ -59,28 +59,30 @@ const Idea: React.FC<{
 	return (
 		<div
 			key={idea.id}
-			className={`mb-4 p-4 w-full rounded-lg shadow-lg  ${statusColor(
+			className={`mb-4 p-4 w-full grid grid-rows-4 rounded-lg shadow-lg  ${statusColor(
 				idea.status
 			)}`}>
-			<h3 className="text-xl font-bold">{idea.title}</h3>
-			<div className="flex w-full items-center justify-between">
-				<p className="text-sm text-red-950 dark:text-gray-300">
-					{idea.proposer}
-				</p>
-				<p className="text-sm text-gray-950 dark:text-gray-300">
-					{formatDate(idea.votingStartTime) +
-						" - " +
-						formatDate(idea.votingEndTime)}
-				</p>
+			<div className="info">
+				<h3 className="text-xl font-bold">{idea.title}</h3>
+				<div className="flex w-full items-center justify-between pt-1 pb-2">
+					<p className="text-sm text-red-950 dark:text-gray-300">
+						{idea.proposer}
+					</p>
+					<p className="text-sm text-gray-950 dark:text-gray-300">
+						{formatDate(idea.votingStartTime) +
+							" - " +
+							formatDate(idea.votingEndTime)}
+					</p>
+				</div>
 			</div>
-			<p className="text-md mt-2">{idea.description}</p>
+			<p className="text-md mt-2 row-span-2">{idea.description}</p>
 			<div className="mt-4 flex items-center gap-5">
 				{/* Upvote section */}
 				<div className="flex items-center">
 					<button
 						onClick={() => handleUpvote(idea.id)}
 						className="flex items-center transition-all duration-150">
-						<BiSolidUpvote className="text-3xl text-green-500 hover:bg-green-500 hover:text-white rounded-full p-1" />
+						<BiSolidUpvote className="text-3xl text-green-400 dark:text-green-500 hover:bg-green-400 hover:dark:bg-green-500 hover:text-white rounded-full p-1 transition-colors duration-150" />
 					</button>
 					<p className="ml-2 text-lg">{idea.votesFor}</p>
 				</div>
@@ -90,7 +92,7 @@ const Idea: React.FC<{
 					<button
 						onClick={() => handleDownvote(idea.id)}
 						className="flex items-center transition-all duration-150">
-						<BiSolidDownvote className="text-3xl text-red-500 hover:bg-red-500 hover:text-white rounded-full p-1" />
+						<BiSolidDownvote className="text-3xl text-red-400 dark:text-red-500 hover:bg-red-400 hover:dark:bg-red-500 hover:text-white rounded-full p-1 transition-colors duration-150" />
 					</button>
 					<p className="ml-2 text-lg">{idea.votesAgainst}</p>
 				</div>
