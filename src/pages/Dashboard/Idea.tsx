@@ -1,4 +1,4 @@
-import { voteStruct } from "../../types/Struct";
+import { voteStruct } from "../../types/type.dt";
 import { BiSolidDownvote, BiSolidUpvote } from "react-icons/bi";
 
 const Idea: React.FC<{

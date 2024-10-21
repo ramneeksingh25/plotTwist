@@ -1,4 +1,4 @@
-import { ProposalStatus } from "../../types/Struct";
+import { ProposalStatus } from "../../types/type.dt";
 
 export const movieProposals = [
 	{

@@ -1,5 +1,5 @@
 import { BiSolidDownvote, BiSolidUpvote } from "react-icons/bi";
-import { ProposalStatus, ProposalStruct } from "../types/Struct";
+import { ProposalStatus, ProposalStruct } from "../types/type.dt";
 
 const Idea: React.FC<{
 	idea: ProposalStruct;
